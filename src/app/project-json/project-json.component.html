@@ -1,0 +1,34 @@
+<main>
+    <!-- Example of accessing elements of the object 'coreCourse' after all it is just an object -->
+    <!-- <h1 style="text-align: center">{{ coreCourse.description }}</h1> -->
+    <div class="courses">
+      <!-- 
+      -- comment -- Here we are Binding our parent selection to our child component
+      -- comment -- This (click) example demostrates the bubbling
+      -- comment -- <app-course-card (click)="onSecondEvent()" [course]="coreCourse"></app-course-card>
+      <app-course-card
+        (customClickExample)="onSecondEvent($event)"
+        [course]="coreCourse"
+      ></app-course-card>
+      -- comment -- The $event is catching the 'course' emitted from the child and passing the data to the parent
+      <app-course-card
+        (customClickExample)="onSecondEvent($event)"
+        [course]="coreCourse1"
+      ></app-course-card>
+      <app-course-card
+        (customClickExample)="onSecondEvent($event)"
+        [course]="coreCourse2"
+      ></app-course-card>
+    -->
+      <div>
+        <h1>{{ dateExample | date: 'd/MMM/YYYY'}}</h1>
+        <h1>{{ titleExample | titlecase}}</h1>
+        <h1>{{ priceExample | number}}</h1>
+      </div>
+      <app-course-card-json
+        *ngFor="let course456 of courseJSON"
+        (customClickExample)="onSecondEvent($event)"
+        [course123]="course456"
+      ></app-course-card-json>
+    </div>
+  </main>

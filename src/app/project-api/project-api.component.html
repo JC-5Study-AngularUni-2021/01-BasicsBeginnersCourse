@@ -1,0 +1,15 @@
+<main>
+    <div class="courses" *ngIf="courses$ | async as courses">
+        <!-- <app-course-card-api 
+            *ngFor="let courseXYZ of courses_JSON"
+            [course]="courseXYZ"> -->
+            <app-course-card-api 
+            *ngFor="let courseXYZ of courses"
+            (courseChanged)="save($event)"
+            [course]="courseXYZ">
+            
+            <app-course-image [src]="courseXYZ.iconUrl"></app-course-image>
+
+        </app-course-card-api>
+    </div>
+</main>

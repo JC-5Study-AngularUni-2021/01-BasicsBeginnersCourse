@@ -1,0 +1,39 @@
+<main>
+    <section *ngFor="let note of notesJSON; index as i" >
+      <ul *ngIf="note.id < 5" style="margin: 0; padding-top: 0px; padding-bottom: 0px">
+        <li style="background-color: seashell; border-radius: 15px; padding: 5px 20px; list-style-type: none">
+          <h3>{{ note.title }}</h3>
+          <p>{{ note.description }}</p>
+          <ul style="padding-top: 0px; padding-bottom: 0px">
+            <li>
+              <a href="{{ note.url }}" target="_blank">{{ note.urlTitle }}</a>
+            </li>
+            <li *ngFor="let subNote of note.subNotes">
+              {{ subNote }}
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    
+    <h1 style="text-align: center; color: red;">Angular Dictionary</h1>
+  
+    <section *ngFor="let note of notesJSON | slice: 4:20 ; index as i" >
+      <!-- <ul *ngIf="note.id > 4 && note.title" style="margin: 0; padding-top: 0px; padding-bottom: 0px"></ul> -->
+      <ul style="margin: 0; padding-top: 0px; padding-bottom: 0px">
+        <li style="background-color: rgba(240, 128, 128, 0.466); border-radius: 15px; padding: 5px 20px; list-style-type: none">
+          <h3>{{ note.title }}</h3>
+          <p>{{ note.description }}</p>
+          <ul style="padding-top: 0px; padding-bottom: 0px">
+            <li>
+              <a href="{{ note.url }}">{{ note.urlTitle }}</a>
+            </li>
+            <li *ngFor="let subNote of note.subNotes">
+              {{ subNote }}
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </main>
+  

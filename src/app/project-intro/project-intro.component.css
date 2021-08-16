@@ -1,0 +1,18 @@
+main {
+    display: block;
+    position: absolute;
+    margin-top: 4.25rem;
+    margin-left: 4rem;
+  }
+  
+  input.demo {
+    border: 2px solid black;
+    width: 300px;
+    height: 30p;
+    font-size: 25px;
+  }
+
+  img {
+    cursor: pointer;
+  }
+  

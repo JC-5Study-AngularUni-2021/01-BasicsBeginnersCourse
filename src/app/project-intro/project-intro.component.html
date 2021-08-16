@@ -1,0 +1,22 @@
+<main>
+    <p>this is an example of a '<b>Text interpolation</b>' = {{ data.title }}</p>
+    <br /><br />
+    <img
+      width="280"
+      alt="Angular Logo"
+      src="{{ data.Url }}"
+      (click)="onLogoClick()"
+    />
+    <br /><br />
+    <!-- The '#' is a template reference-->
+    <!-- The '[]' used on value is property binding -->
+    <!-- the '()' Template statements i.e. DOM events -->
+    <input
+      type="text"
+      class="demo"
+      [value]="data.title"
+      (keyup)="onKeyUp(titleInput.value)"
+      #titleInput
+    />
+  </main>
+  

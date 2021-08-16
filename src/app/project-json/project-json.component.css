@@ -1,0 +1,10 @@
+main {
+    display: block;
+    margin-top: 5rem;
+  }
+  
+  .courses {
+    max-width: 400px;
+    margin: 50px auto;
+  }
+  
